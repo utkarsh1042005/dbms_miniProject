@@ -1,0 +1,80 @@
+<% layout('layout') %>
+
+<div class="container mt-5">
+  <div class="card shadow p-4">
+    <h2 class="text-center mb-4 text-primary">Add New Student Record</h2>
+
+    <form action="/create" method="POST">
+      <!-- Roll Number -->
+      <div class="mb-3">
+        <label for="roll_no" class="form-label">Roll Number</label>
+        <input
+          type="text"
+          class="form-control"
+          id="roll_no"
+          name="roll_no"
+          placeholder="Enter Roll Number"
+          required
+        />
+      </div>
+
+      <!-- Student Name -->
+      <div class="mb-3">
+        <label for="name" class="form-label">Student Name</label>
+        <input
+          type="text"
+          class="form-control"
+          id="name"
+          name="name"
+          placeholder="Enter Full Name"
+          required
+        />
+      </div>
+
+      <!-- Course -->
+      <div class="mb-3">
+        <label for="course" class="form-label">Course</label>
+        <input
+          type="text"
+          class="form-control"
+          id="course"
+          name="course"
+          placeholder="Enter Course Name (e.g., B.Tech, BCA)"
+        />
+      </div>
+
+      <!-- Subject -->
+      <div class="mb-3">
+        <label for="subject" class="form-label">Subject</label>
+        <input
+          type="text"
+          class="form-control"
+          id="subject"
+          name="subject"
+          placeholder="Enter Subject Name"
+        />
+      </div>
+
+      <!-- Marks -->
+      <div class="mb-3">
+        <label for="marks" class="form-label">Marks</label>
+        <input
+          type="number"
+          class="form-control"
+          id="marks"
+          name="marks"
+          placeholder="Enter Marks"
+          min="0"
+          max="100"
+          required
+        />
+      </div>
+
+      <!-- Buttons -->
+      <div class="d-flex justify-content-between">
+        <a href="/home" class="btn btn-secondary">← Back</a>
+        <button type="submit" class="btn btn-success">Add Record</button>
+      </div>
+    </form>
+  </div>
+</div>
